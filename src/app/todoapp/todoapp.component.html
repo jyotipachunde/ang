@@ -11,7 +11,7 @@
         mat-raised-button color="primary">ADD TODO</button>
     </div>
     <div class="col-md-6">
-        <ul *ngIf="todoarr.length>0"; else notodo class="list-group">
+        <ul class="list-group" *ngIf="todoarr.length>0; else notodo">
             <li *ngFor="let todo of todoarr;"
             class="list-group-item d-flex justify-content-between align-items-center">
                 <strong>{{todo.todoitem}}</strong>
@@ -27,7 +27,7 @@
             </li>
         </ul>
         <ng-template #notodo>
-            <div class="alert alert-info">
+            <div class="alert alert-primary mt-3" role="alert">
                 No TODOs added yet.
             </div>
 

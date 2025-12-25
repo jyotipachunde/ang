@@ -33,9 +33,9 @@ export class TodoappComponent implements OnInit {
     this.todoitem.nativeElement.value='';
   }
 
-  trackByid(index: number, item: Itodoapp): number {
-    return item.id;
-  }
+  //trackByid(index: number, item: Itodoapp): number {
+   // return item.id;
+  //}
 
   deleteTodo(id: number){
     let geti=this.todoarr.findIndex(todo => todo.id === id);
