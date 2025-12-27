@@ -6,9 +6,14 @@
             #todoitem class="form-control">
         </div>
 
-        <button class="btn-block"
+        <button *ngIf="!isEditMode"
+         class="btn-block"
         (click)="addTodo()" 
         mat-raised-button color="primary">ADD TODO</button>
+        <button class="btn-block"
+        (click)="updatetodo()"
+        mat-raised-button color="primary" 
+        *ngIf="isEditMode">UPDATE TODO</button>
     </div>
     <div class="col-md-6">
         <ul class="list-group" *ngIf="todoarr.length>0; else notodo">
@@ -16,7 +21,7 @@
             class="list-group-item d-flex justify-content-between align-items-center">
                 <strong>{{todo.todoitem}}</strong>
                 <div>
-                    <button mat-mini-fab color="primary" class="mr-3">
+                    <button (click)="edittodo(todo)" mat-mini-fab color="primary" class="mr-3">
                         <mat-icon>edit</mat-icon>
                     </button>
                     <button (click)="deleteTodo(todo.id)"
@@ -32,7 +37,6 @@
             </div>
 
             </ng-template>
-
 
     </div>
 </div>

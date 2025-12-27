@@ -6,6 +6,7 @@ import { TodoappComponent } from './todoapp/todoapp.component';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -18,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     MatButtonModule,
     MatIconModule,
+    MatSnackBarModule,
     BrowserAnimationsModule
   ],
   providers: [],
