@@ -1,0 +1,73 @@
+<div class="row">
+    <div class="col-12">
+        <h2 class="text-primary m-3">{{isEditMode ? 'UPDATE STUDENT' : 'ADD STUDENT'}}</h2>
+    </div>
+    <div class="col-md-5">
+        <div class="card-body">
+            <div class="form-group">
+                <label for="fname">fname</label>
+                <input type="text" #fname class="form-control">
+
+                <label for="lname">lname</label>
+                <input type="text" #lname class="form-control">
+
+                <label for="email">email</label>
+                <input type="text" #email class="form-control">
+
+                <label for="contact">contact</label>
+                <input type="text" #contact class="form-control mb-3">
+
+                <button *ngIf="!isEditMode" class="btn-block" (click)="addstd()" mat-raised-button color="primary">ADD
+                    STD</button>
+                <button *ngIf="isEditMode" class="btn-block" (click)="updatestd()" mat-raised-button
+                    color="primary">UPDATE TODO</button>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-7">
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Sr No</th>
+                        <th>fname</th>
+                        <th>lname</th>
+                        <th>email</th>
+                        <th>contact</th>
+                        <th>edit</th>
+                        <th>delete</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let std of stdarr; let i=index trackById">
+                    <tr>
+                        <td>{{i+1}}</td>
+                        <td>{{std.fname}}</td>
+                        <td>{{std.lname}}</td>
+                        <td>{{std.email}}</td>
+                        <td>{{std.contact}}</td>
+                        <td><button mat-mini-fab color="primary" (click)="onedit(std)" class="mr-2">
+                                <mat-icon>edit</mat-icon>
+                            </button></td>
+                        <td> <button (click)="deletestd(std.id)" mat-mini-fab color="warn">
+                                <mat-icon>delete</mat-icon>
+                            </button></td>
+
+                    </tr>
+                </tbody>
+
+
+            </table>
+        </div>
+
+        <ng-template #nostd>
+            <div class="alert alert-primary mt-3" role="alert">
+                No Students added yet.
+            </div>
+
+        </ng-template>
+
+
+    </div>
+</div>

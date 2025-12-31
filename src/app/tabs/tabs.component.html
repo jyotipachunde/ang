@@ -1,0 +1,48 @@
+<div class="container mb-3">
+<ul class="nav nav-pills">
+    <li class="nav-item d-flex justify-content-center flex-grow-1 widt-100" *ngFor="let tab of skillarr;">
+        <a (click)="selectedskill=tab.name;"
+        [ngClass]="
+        {active: selectedskill.toLowerCase().includes(tab.name.toLowerCase())
+        }"
+        class="nav-link px-5 text-dark" href="javascript:;">{{tab.name}}</a>
+    </li>
+</ul>
+
+<ng-container *ngFor="let tab of skillarr;">
+    <div class="card" *ngIf="selectedskill.toLowerCase().includes(tab.name.toLowerCase())">
+    <div class="card-body text-center">
+        <strong>{{tab.name | uppercase}}</strong>
+        {{tab.content}}</div>
+</div>
+</ng-container>
+</div>
+
+<hr>
+
+
+<div class="container">    
+
+<ul class="nav nav-pills">
+    <li class="nav-item d-flex justify-content-center flex-grow-1 widt-100" *ngFor="let dish of recipiesarr;">
+        <a (click)="selectedrecipy=dish.name;"
+        [ngClass]="
+        {active: selectedrecipy.toLowerCase().includes(dish.name.toLowerCase()),
+            'bg-danger': selectedrecipy.toLowerCase().includes(dish.name.toLowerCase())
+        }"
+        class="nav-link px-5 text-dark" href="javascript:;">{{dish.name}}</a>
+    </li>
+</ul>
+
+<ng-container *ngFor="let dish of recipiesarr;">
+    <div class="card" *ngIf="selectedrecipy.toLowerCase().includes(dish.name.toLowerCase())">
+    <div class="card-body text-center">
+        <strong>{{dish.name | uppercase}}</strong>
+        {{dish.content}}</div>
+</div>
+</ng-container>
+
+</div>
+
+
+
