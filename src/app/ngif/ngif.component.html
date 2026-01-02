@@ -1,0 +1,122 @@
+<h2 class="bg-success m-5">ng if</h2>
+<div class="container mb-3">
+<ul class="nav nav-pills">
+    <li class="nav-item d-flex justify-content-center flex-grow-1 widt-100" >
+        <a (click)="selectedskill='angular'"
+        [ngClass]="
+        {active: selectedskill.toLowerCase().includes('angular'.toLowerCase())
+        }"
+        class="nav-link px-5 text-dark" href="javascript:;">angular</a>
+       
+    </li>
+    <li class="nav-item d-flex justify-content-center flex-grow-1 widt-100" >
+        <a (click)="selectedskill='react'"
+        [ngClass]="
+        {active: selectedskill.toLowerCase().includes('react'.toLowerCase())
+        }"
+        class="nav-link px-5 text-dark" href="javascript:;">react</a>
+    </li>
+    <li class="nav-item d-flex justify-content-center flex-grow-1 widt-100">
+        <a (click)= "selectedskill='vue'"
+        [ngClass]="
+        {active: selectedskill.toLowerCase().includes('vue'.toLowerCase())
+        }"
+        class="nav-link px-5 text-dark" href="javascript:;">vue</a>
+    </li>
+    <li class="nav-item d-flex justify-content-center flex-grow-1 widt-100" >
+        <a (click)="selectedskill='svelte'"
+        [ngClass]="
+        {active: selectedskill.toLowerCase().includes('svelte'.toLowerCase())
+        }"
+        class="nav-link px-5 text-dark" href="javascript:;">svelte</a>
+    </li>
+</ul>
+
+
+    <div class="card" *ngIf="selectedskill.toLowerCase().includes(skillarr[0].name.toLowerCase())">
+    <div class="card-body text-center">
+        <strong>{{skillarr[0].name | uppercase}}</strong>
+        {{skillarr[0].content}}</div>
+</div>
+<div class="card" *ngIf="selectedskill.toLowerCase().includes(skillarr[1].name.toLowerCase())">
+    <div class="card-body text-center">
+        <strong>{{skillarr[1].name | uppercase}}</strong>
+        {{skillarr[1].content}}</div>
+</div>
+<div class="card" *ngIf="selectedskill.toLowerCase().includes(skillarr[2].name.toLowerCase())">
+    <div class="card-body text-center">
+        <strong>{{skillarr[2].name | uppercase}}</strong>
+        {{skillarr[2].content}}</div>
+</div>
+<div class="card" *ngIf="selectedskill.toLowerCase().includes(skillarr[3].name.toLowerCase())">
+    <div class="card-body text-center">
+        <strong>{{skillarr[3].name | uppercase}}</strong>
+        {{skillarr[3].content}}</div>
+</div>
+
+</div>
+
+<hr>
+
+
+<div class="container mt-5">    
+
+<ul class="nav nav-pills">
+    <li class="nav-item d-flex justify-content-center flex-grow-1 widt-100" >
+        <a (click)="selectedrecipy='wadapav';"
+        [ngClass]="
+        {active: selectedrecipy.toLowerCase().includes('wadapav'.toLowerCase()),
+            'bg-danger': selectedrecipy.toLowerCase().includes('wadapav'.toLowerCase())
+        }"
+        class="nav-link px-5 text-dark" href="javascript:;">wadapav</a>
+    </li>
+    <li class="nav-item d-flex justify-content-center flex-grow-1 widt-100" >
+        <a (click)="selectedrecipy='pavbhaji';"
+        [ngClass]="
+        {active: selectedrecipy.toLowerCase().includes('pavbhaji'.toLowerCase()),
+            'bg-danger': selectedrecipy.toLowerCase().includes('pavbhaji'.toLowerCase())
+        }"
+        class="nav-link px-5 text-dark" href="javascript:;">pavbhaji</a>
+    </li>
+    <li class="nav-item d-flex justify-content-center flex-grow-1 widt-100" >
+        <a (click)="selectedrecipy='dosa';"
+        [ngClass]="
+        {active: selectedrecipy.toLowerCase().includes('dosa'.toLowerCase()),
+            'bg-danger': selectedrecipy.toLowerCase().includes('dosa'.toLowerCase())
+        }"
+        class="nav-link px-5 text-dark" href="javascript:;">dosa</a>
+    </li>
+    <li class="nav-item d-flex justify-content-center flex-grow-1 widt-100" >
+        <a (click)="selectedrecipy='idli';"
+        [ngClass]="
+        {active: selectedrecipy.toLowerCase().includes('idli'.toLowerCase()),
+            'bg-danger': selectedrecipy.toLowerCase().includes('idli'.toLowerCase())
+        }"
+        class="nav-link px-5 text-dark" href="javascript:;">idli</a>
+    </li>
+</ul>
+
+<ng-container>
+    <div class="card" *ngIf="selectedrecipy.toLowerCase().includes('wadapav'.toLowerCase())">
+    <div class="card-body text-center">
+        <strong>{{recipiesarr[0].name | uppercase}}</strong>
+        {{recipiesarr[0].content}}</div>
+</div>
+ <div class="card" *ngIf="selectedrecipy.toLowerCase().includes('pavbhaji'.toLowerCase())">
+    <div class="card-body text-center">
+        <strong>{{recipiesarr[1].name | uppercase}}</strong>
+        {{recipiesarr[1].content}}</div>
+</div>
+ <div class="card" *ngIf="selectedrecipy.toLowerCase().includes('dosa'.toLowerCase())">
+    <div class="card-body text-center">
+        <strong>{{recipiesarr[2].name | uppercase}}</strong>
+        {{recipiesarr[2].content}}</div>
+</div>
+ <div class="card" *ngIf="selectedrecipy.toLowerCase().includes('idli'.toLowerCase())">
+    <div class="card-body text-center">
+        <strong>{{recipiesarr[3].name | uppercase}}</strong>
+        {{recipiesarr[3].content}}</div>
+</div>
+</ng-container>
+
+</div>

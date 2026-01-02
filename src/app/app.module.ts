@@ -13,6 +13,8 @@ import { StdcrudComponent } from './stdcrud/stdcrud.component';
 import { CardsComponent } from './cards/cards.component';
 import { GetConformComponent } from './get-conform/get-conform.component';
 import { TabsComponent } from './tabs/tabs.component';
+import { TabswitchComponent } from './tabswitch/tabswitch.component';
+import { NgifComponent } from './ngif/ngif.component';
 //import { GetConformComponent } from './get-conform/get-conform.component';
 
 @NgModule({
@@ -22,7 +24,9 @@ import { TabsComponent } from './tabs/tabs.component';
     StdcrudComponent,
     CardsComponent,
     GetConformComponent,
-    TabsComponent  
+    TabsComponent,
+    TabswitchComponent,
+    NgifComponent  
   ],
   imports: [
     BrowserModule,
