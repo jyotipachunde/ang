@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Imobile } from '../terface/mobile';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-mobile',

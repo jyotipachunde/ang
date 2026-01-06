@@ -38,7 +38,7 @@ import { CommonModule } from '@angular/common';
     InputwithmovieComponent,
     MoviedashComponent,
     MobileDashComponent,
-    MobileComponent,
+    MobileComponent
      ],
      schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
