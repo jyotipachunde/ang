@@ -1,0 +1,73 @@
+
+<div class="card mb-3 h-100">
+    <div class="card-header d-flex justify-content-between align-item-center">
+        <h2>{{movieList.original_title||movieList.title}}</h2>
+        <span [ngClass]="
+        {'badge badge-success': movieList.vote_average>=7,
+        'badge badge-warning': movieList.vote_average>=4 && movieList.vote_average<=6.9,
+        'badge badge-danger': movieList.vote_average<4
+        }">{{movieList.vote_average}}</span>
+
+    </div>
+    <div class="card-body p-0">
+       
+        <figure class="h-100">
+                    <img src="https://image.tmdb.org/t/p/w500{{movieList.backdrop_path}}" class="img-fluid" alt="https://image.tmdb.org/t/p/w500{{movieList.poster_path}}">
+                    <figcaption class="figcaption">
+                        <p class="text-white"> 
+                            {{movieList.overview}} 
+                        </p>
+                    </figcaption>
+                </figure>
+    </div>
+    <div class="card-footer d-flex justify-content-between align-item-center">
+        <button mat-fab color="primary" class="mr-2">
+        edit
+        </button>
+        <button mat-mini color="warn" class="mr-2">
+        delete
+        </button>
+    </div>
+</div>
+
+
+
+
+
+<!--<div class="col-md-4 mb-4">
+  <div class="card">
+  <figure class="mivieCard mb-0">
+    <img src="${movieList.backdrop_path}" alt="movie" title="movie" >
+  <figcaption>
+  <div class="titleInfo">
+  <div class="row">
+  <div class="col-10">
+  <h3> {{movieList.title||movieList.original_title}}  
+  </h3>    
+  </div>    
+  <div  class="col-2">    
+    <span [ngClass]="
+        {'badge badge-success': movieList.vote_average>=7,
+        'badge badge-warning': movieList.vote_average>=4 && movieList.vote_average<=6.9,
+        'badge badge-danger': movieList.vote_average<4
+        }">{{movieList.vote_average}}</span> 
+  </div>   
+  </div>  
+  </div>  
+  <div class="overview"> 
+    <h3> {{movieList.title||movieList.original_title}}
+    </h3>    
+    <p>  {{movieList.overview}}
+        {{movieList.id}}  
+        {{movieList.original_language}} 
+        {{movieList.popularity}} 
+        {{movieList.release_date}}
+        {{movieList.genre_ids}}
+        {{movieList.adult}}
+        {{movieList.backdrop_path}}
+    </p>    
+    </div> 
+    </figcaption> 
+    </figure>   
+        </div>
+        </div>-->

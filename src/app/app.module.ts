@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -15,6 +15,13 @@ import { GetConformComponent } from './get-conform/get-conform.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { TabswitchComponent } from './tabswitch/tabswitch.component';
 import { NgifComponent } from './ngif/ngif.component';
+import { InputdComponent } from './inputd/inputd.component';
+import { HttpClientModule } from '@angular/common/http';
+import { InputwithmovieComponent } from './inputwithmovie/inputwithmovie.component';
+import { MoviedashComponent } from './moviedash/moviedash.component';
+import { MobileDashComponent } from './mobile-dash/mobile-dash.component';
+import { MobileComponent } from './mobile/mobile.component';
+import { CommonModule } from '@angular/common';
 //import { GetConformComponent } from './get-conform/get-conform.component';
 
 @NgModule({
@@ -26,8 +33,14 @@ import { NgifComponent } from './ngif/ngif.component';
     GetConformComponent,
     TabsComponent,
     TabswitchComponent,
-    NgifComponent  
-  ],
+    NgifComponent,
+    InputdComponent,
+    InputwithmovieComponent,
+    MoviedashComponent,
+    MobileDashComponent,
+    MobileComponent,
+     ],
+     schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
     BrowserModule,
     FormsModule,
@@ -35,8 +48,9 @@ import { NgifComponent } from './ngif/ngif.component';
     MatIconModule,
     MatSnackBarModule,
     BrowserAnimationsModule,
-    MatDialogModule
-  ],
+    MatDialogModule,
+    HttpClientModule,
+  CommonModule ],
   providers: [],
   bootstrap: [AppComponent]
 })

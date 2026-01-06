@@ -1,0 +1,15 @@
+body{
+    height: 100%;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+h2{
+   overflow: hidden;
+   height: 40px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1.5;
+}

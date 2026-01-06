@@ -1,0 +1,22 @@
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-4 mb-3" *ngFor="let post of postarr" ;>
+            <div class="card h-100 ">
+                <div class="card-header">
+                    <strong>{{post.title | uppercase}}</strong>
+
+                </div>
+                <div class="card-body">
+                    {{post.body}}
+
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <button class="btn btn-primary">Edit</button>
+                    <button class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+          
+        </div>
+    </div>
+</div>
