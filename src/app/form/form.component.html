@@ -1,0 +1,21 @@
+<div class="card">
+    <form #todof="ngForm">
+        <div class="form-group">
+            <label for="Item">ADDItem</label>
+            <input required type="text" id="ADDItem" ngModel name="item" #item="ngModel" 
+            class="form-control">
+
+            <strong class="text-danger" *ngIf="item.touched&& item.hasError('required')">mandatory</strong>
+
+        </div>
+        <div class="form-group">
+            <button *ngIf="!isedit"
+            type="button" (click)="submitForm()" 
+            class="btn btn-primary btn-block">add todo</button>
+           <button *ngIf="isedit"
+           type="button" (click)="editForm(editob)" 
+           class="btn btn-primary btn-block">update todo</button>
+
+        </div>
+    </form>
+</div>

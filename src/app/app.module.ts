@@ -22,6 +22,12 @@ import { MoviedashComponent } from './moviedash/moviedash.component';
 import { MobileDashComponent } from './mobile-dash/mobile-dash.component';
 import { MobileComponent } from './mobile/mobile.component';
 import { CommonModule } from '@angular/common';
+import { OutpotInputComponent } from './outpot-input/outpot-input.component';
+import { OutpotInputdComponent } from './outpot-inputd/outpot-inputd.component';
+import { FormComponent } from './form/form.component';
+import { TestComponent } from './test/test.component';
+import { TestcComponent } from './testc/testc.component';
+
 //import { GetConformComponent } from './get-conform/get-conform.component';
 
 @NgModule({
@@ -38,7 +44,12 @@ import { CommonModule } from '@angular/common';
     InputwithmovieComponent,
     MoviedashComponent,
     MobileDashComponent,
-    MobileComponent
+    MobileComponent,
+    OutpotInputComponent,
+    OutpotInputdComponent,
+    FormComponent,
+    TestComponent,
+    TestcComponent
      ],
      schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
@@ -50,7 +61,9 @@ import { CommonModule } from '@angular/common';
     BrowserAnimationsModule,
     MatDialogModule,
     HttpClientModule,
-  CommonModule ],
+  CommonModule,
+  FormsModule
+ ],
   providers: [],
   bootstrap: [AppComponent]
 })

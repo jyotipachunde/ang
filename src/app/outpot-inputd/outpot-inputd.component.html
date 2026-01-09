@@ -1,0 +1,21 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-5">
+            <app-form 
+            [editob]="editob"
+            (emittodo)="gettodo($event)"
+            (emmitup)="getup($event)">
+            
+            </app-form>
+
+        </div>
+        <div class="col-7">
+            <app-outpot-input 
+            (editemmit)="onedit($event)"
+            [todoarr]="todoarr">
+
+            </app-outpot-input>
+        </div>
+    </div>
+
+</div>

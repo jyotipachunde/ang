@@ -1,0 +1,13 @@
+<ul class="liist-group">
+    <li class="list-group-item d-flex justify-content-between align-items-center" 
+    *ngFor="let todo of todoarr">
+        <span>{{todo.item}} </span>
+        <div class="">
+                <button class="mr-2" mat-raised-button color="primary" (click)="onedit(todo)">edit</button>
+                <button  (click)="ondelete(todo)"
+                class="mr-2" mat-raised-button color="warn">delete</button>
+        </div>
+    </li>
+
+
+</ul>

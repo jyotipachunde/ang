@@ -9,3 +9,8 @@ export interface Imobile {
   noOfItems: number;
   features: string[];
 }
+
+export interface Itodo {
+  id: string;
+  item: string;
+}
