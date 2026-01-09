@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 interface Itodo {
   id: string;
@@ -26,7 +27,11 @@ export class OutpotInputdComponent implements OnInit {
 ];
 todo!: Itodo;
 
-constructor() {
+constructor(
+      private _snackBar: MatSnackBar,
+
+
+) {
   const stored = localStorage.getItem("todoarr");
   if(stored){
     this.todoarr = JSON.parse(stored); 
@@ -50,6 +55,12 @@ console.log(this.todoarr);
     this.todoarr.unshift(todo);
     console.log(todo);
     localStorage.setItem("todoarr", JSON.stringify(this.todoarr));
+     this._snackBar.open('item added  Successfully','close',{
+            horizontalPosition:'right',
+            verticalPosition:'top',
+            duration:2000,
+          });
+
 
   }
 
@@ -65,6 +76,11 @@ console.log(this.todoarr);
     console.log(geti);
      // localStorage.setItem("todoarr", JSON.stringify(this.todoarr));
       localStorage.setItem("todoarr", JSON.stringify(this.todoarr));
+       this._snackBar.open('item updates  Successfully','close',{
+            horizontalPosition:'right',
+            verticalPosition:'top',
+            duration:2000,
+          });
   }
 }
 
